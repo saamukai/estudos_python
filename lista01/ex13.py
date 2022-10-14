@@ -13,10 +13,10 @@ horas = float(input("Digite quantas horas por mes voce traballha: "))
 
 
 salario_bruto = valor_hora*horas
-imposto_renda = salario_bruto-(salario_bruto*0.11)
-inss = salario_bruto-(salario_bruto*0.08)
-sindicato = salario_bruto-(salario_bruto*0.05)
+imposto_renda = salario_bruto*0.11
+inss = salario_bruto*0.08
+sindicato = salario_bruto*0.05
 salario_liquido = salario_bruto - imposto_renda - inss - sindicato
 
-print(f"+ Salario Bruto: {round(salario_bruto,2)} R$\n- IR: {round(imposto_renda,2)} R$\n-INSS: {round(inss,2)}")
-print(f"- Sindicato: {round(sindicato,2)}\n= Salaário Liquido: {round(salario_liquido,2)}")
+print(f"\n+ Salario Bruto: {round(salario_bruto,2)} R$\n- IR: {round(imposto_renda,2)} R$\n- INSS: {round(inss,2)} R$")
+print(f"- Sindicato: {round(sindicato,2)} R$\n= Salário Liquido: {round(salario_liquido,2)} R$\n")
