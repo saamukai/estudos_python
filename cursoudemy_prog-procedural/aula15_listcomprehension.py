@@ -35,4 +35,3 @@ print(f'\n{ex6}\n')
     # ternário
 ex7 = [v if v % 3 == 0 and v % 8 == 0 else 'o' for v in l3]
 print(ex7)
-
