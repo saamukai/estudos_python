@@ -20,6 +20,7 @@ def tag_bloco(conteudo, *args, classe='sucess', inline=False, **kwargs):
 
 # função que gera uma lista em html
 def tag_lista(*itens, **kwargs):
+    print(f'INTENNSS ====> {itens}')
     lista = ''.join(f'<li>{item}</li>' for item in itens)
     atributos = filtrar_atrs(kwargs, ul_atrs)
     return f'<ul {atributos}>{lista}</ul>'
