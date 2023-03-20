@@ -4,6 +4,17 @@ class Humano:
 
     def __init__(self, nome):
         self.nome = nome
+        self._idade = None  # _ : Atributo privado
+
+    @property
+    def idade(self):
+        return self._idade
+
+    @idade.setter
+    def idade(self, idade):
+        if idade < 0:
+            raise ValueError('Idade deve ser um numero positivo')
+        self._idade = idade
 
     def das_carvernas(self):
         self.especie = 'Homo Neanderthalensis'
@@ -29,14 +40,5 @@ class HomoSapiens(Humano):
 
 if __name__ == '__main__':
     jose = HomoSapiens('José')
-    # HomoSapiens.das_canvernas(jose)
-    grokn = Neanderthal('Grokn')
-
-    print(
-        f'Evolução (a partir da classe): {", ".join(jose.especies())}'
-    )
-    print(f'Evolução (a partir da instancia): {", ".join(jose.especies())}')
-    print(f'Homo Sapiens evoluido? {HomoSapiens.is_evoluido()}')
-    print(f'Neanderthal evoluido? {Neanderthal.is_evoluido()}')
-    print(f'José Evoluido? {jose.is_evoluido()}')
-    print(f'Grokn evoluido? {grokn.is_evoluido()}')
+    jose.idade = 40  # jose._idade -> errado
+    print(f'Nome: {jose.nome}, Idade: {jose.idade}')

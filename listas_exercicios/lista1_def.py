@@ -4,7 +4,7 @@ def saudacao (saudacao, nome):
     print(f"{saudacao}, {nome}")
 
 
-saudacao("Olá, bom dia", "Samuel")
+saudacao("Olá, bom dia", "Nome")
 
 ######################
 def soma (n1, n2, n3):

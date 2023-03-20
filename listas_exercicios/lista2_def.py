@@ -17,7 +17,7 @@ def dizOi(nome):
 def saudar(saudacao, nome):
     return f'{saudacao} , {nome}!'
 
-executing2 = master2(dizOi, "Samuel")
+executing2 = master2(dizOi, "Nome")
 print(executing2)
-executing2 = master2(saudar, "Bom dia", "Samuel")
+executing2 = master2(saudar, "Bom dia", "Nome")
 print(executing2)
