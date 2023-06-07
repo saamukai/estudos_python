@@ -5,6 +5,11 @@ carrinho.append(('Produto2', 50))
 carrinho.append(('Produto3', 20))
 carrinho.append(('Produto4', 50))
 
+total1 = sum([float(valor[1]) for valor in carrinho])
+print(total1)
+
+total2 = sum([float(valor) for nome, valor in carrinho])
+print(total2)
 # ---- PEGA OS PRODUTOS
 # for produto in carrinho:
 #     print(produto,type(produto))
@@ -27,9 +32,3 @@ carrinho.append(('Produto4', 50))
 #     soma += produto[1]
 
 # print(soma)
-
-total1 = sum([float(valor[1]) for valor in carrinho])
-print(total1)
-
-total2 = sum([float(valor) for nome, valor in carrinho])
-print(total2)
